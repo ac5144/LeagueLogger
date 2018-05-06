@@ -1,0 +1,18 @@
+<% include ./partials/header %>
+
+<div class="container champion-board">
+    <h1>All Champions</h1>
+    <hr>
+    <div class="row">
+    <% champions.forEach(function(champ) { %>
+        <div class="col-md-2 champion-square">
+            <a href="/champions/<%= champ %>">
+                <img src="http://ddragon.leagueoflegends.com/cdn/8.9.1/img/champion/<%= static_champions[champ].image.full %>">
+                <h4><%= static_champions[champ].name %></h4>
+            </a>
+        </div>
+    <% }); %>        
+    </div>
+</div>
+
+<% include ./partials/footer %>

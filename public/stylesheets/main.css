@@ -1,0 +1,152 @@
+body{
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    font-family: 'Roboto';
+}
+
+.side-panel img{
+    width: 100%;
+}
+
+.side-panel {
+    background-color: #112;
+    color: #fff;
+    padding: 5px 5px 10px 5px;
+    text-align: center;
+}
+
+.post-btn{
+    text-align: center;
+}
+
+.post-item{
+    background-color: #112;
+    color: #fff;
+    margin: 10px 0px;
+    padding: 15px;
+}
+
+.post-item h2, .post-item h4 {
+    display: inline;
+}
+
+.champion-board, .main-board, .login-board {
+    background-color: #112;
+    padding: 15px 20px;
+    color: #fff;
+}
+
+hr {
+  background-color: #fff;
+}
+
+.message {
+  margin-top: 5vh;
+}
+
+.main-board {
+    margin-top: 5vh;
+    opacity: 0.9;
+}
+.champion-board {
+      margin-top: 10px;
+}
+.champion-board a {
+    color: #fff;
+}
+
+.champion-square {
+    text-align: center;
+    padding: 10px 5px;
+}
+.champion-square img {
+    width: 50%;
+}
+
+input {
+    color: #000;
+}
+form h1{
+    text-align: center;
+}
+form {
+    text-align: center;
+}
+
+.navbar {
+    background-color: #112;
+}
+
+nav a, .navbar-text {
+  color: #fff;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 25px;
+  left: 0;
+  z-index: -1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: -1;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Irelia_0.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Udyr_3.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Garen_0.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Katarina_0.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_0.jpg);
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
