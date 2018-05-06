@@ -4,6 +4,7 @@ var bodyParser      = require("body-parser"),
     ejs             = require("ejs"),
     express         = require("express"),
     fs              = require("fs"),
+    methodOverride  = require("method-override"),
     mongoose        = require("mongoose"),
     passport        = require("passport"),
     LocalStrategy   = require("passport-local");
@@ -25,6 +26,7 @@ var app = express();
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(methodOverride("_method"));
 app.use(flash());
 //seedDB("rm-posts");
 
@@ -136,6 +138,17 @@ app.post("/champions/:champion/new", isLoggedIn, function(req, res){
             });
         }
     });
+});
+
+app.delete("/:id", isLoggedIn, function(req, res){
+    Post.findByIdAndRemove(req.params.id, function(err){
+        if (err) {
+            console.log(err);
+            res.redirect("back");
+        } else {
+            res.redirect("back");
+        }
+    })
 });
 
 // OTHER FUNCTIONS

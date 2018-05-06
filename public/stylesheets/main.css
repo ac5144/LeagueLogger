@@ -33,6 +33,12 @@ body{
     display: inline;
 }
 
+.post-content {
+  background-color: #fff;
+  color: #112;
+  padding: 7px;
+}
+
 div.post-item {
   margin-top: 10px;
 }
@@ -45,6 +51,12 @@ div.post-item {
 
 hr {
   background-color: #fff;
+}
+
+.post-ctrl-panel .btn {
+  float: right;
+  margin: 3px;
+  width: 65px;
 }
 
 .message {
