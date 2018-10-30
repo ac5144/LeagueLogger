@@ -6,6 +6,10 @@ var userSchema = new mongoose.Schema({
     posts: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Post"
+    }],
+    recent_champs: [{
+        type:mongoose.Schema.Types.ObjectId,
+        ref: "Champion"
     }]
 });
 
